@@ -4,7 +4,7 @@
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    let celsius = ((temperature - 32) * 5) / 9;
+    const celsius = ((temperature - 32) * 5) / 9;
     return celsius;
 }
 
@@ -31,7 +31,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    let result = message.toUpperCase() + "!";
+    const result = message.toUpperCase() + "!";
     return result;
 }
 
@@ -49,7 +49,7 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    let myWord = word.toLowerCase();
+    const myWord = word.toLowerCase();
     if (myWord == "yes") {
         return true;
     } else if (myWord == "no") {
