@@ -4,25 +4,74 @@
 
 PASS src/objects.test.ts
 PASS src/arrays.test.ts
+FAIL src/nested.test.ts
+  ● Testing the Question[] functions › Testing the getNonEmptyQuestions functions
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 20
+    + Received  +  0
+
+    @@ -1,27 +1,7 @@
+      Array [
+        Object {
+    -     "body": "What is 2+2?",
+    -     "expected": "4",
+    -     "id": 1,
+    -     "name": "Addition",
+    -     "options": Array [],
+    -     "points": 1,
+    -     "published": true,
+    -     "type": "short_answer_question",
+    -   },
+    -   Object {
+    -     "body": "What is the last letter of the English alphabet?",
+    -     "expected": "Z",
+    -     "id": 2,
+    -     "name": "Letters",
+    -     "options": Array [],
+    -     "points": 1,
+    -     "published": false,
+    -     "type": "short_answer_question",
+    -   },
+    -   Object {
+          "body": "Which of these is a color?",
+          "expected": "red",
+          "id": 5,
+          "name": "Colors",
+          "options": Array [
+
+      151 |     test("Testing the getNonEmptyQuestions functions", () => {
+      152 |         expect(getNonEmptyQuestions(BLANK_QUESTIONS)).toEqual([]);
+    > 153 |         expect(getNonEmptyQuestions(SIMPLE_QUESTIONS)).toEqual(
+          |                                                        ^
+      154 |             BACKUP_SIMPLE_QUESTIONS
+      155 |         );
+      156 |         expect(getNonEmptyQuestions(TRIVIA_QUESTIONS)).toEqual(
+
+      at Object.<anonymous> (src/nested.test.ts:153:56)
+
 PASS src/functions.test.ts
-PASS src/HtmlCss.test.tsx
 PASS src/text.test.tsx
+PASS src/HtmlCss.test.tsx
 PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   98.73 |    97.14 |     100 |   98.66 |                   
- src            |   98.73 |    97.14 |     100 |   98.66 |                   
+All files       |   99.26 |    98.14 |     100 |   99.19 |                   
+ src            |   99.26 |    98.14 |     100 |   99.19 |                   
   App.tsx       |     100 |      100 |     100 |     100 |                   
   arrays.ts     |     100 |      100 |     100 |     100 |                   
   functions.ts  |     100 |      100 |     100 |     100 |                   
+  nested.ts     |     100 |      100 |     100 |     100 |                   
   objects.ts    |   95.45 |    83.33 |     100 |   95.45 | 52                
  src/interfaces |       0 |        0 |       0 |       0 |                   
+  answer.ts     |       0 |        0 |       0 |       0 |                   
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 6 passed, 6 total
-Tests:       33 passed, 33 total
+Test Suites: 1 failed, 6 passed, 7 total
+Tests:       1 failed, 48 passed, 49 total
 Snapshots:   0 total
-Time:        3.729 s
+Time:        3.947 s
 Ran all test suites.
