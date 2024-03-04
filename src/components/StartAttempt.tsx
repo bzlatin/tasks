@@ -19,18 +19,18 @@ export function StartAttempt(): JSX.Element {
 
     return (
         <div>
-            <button
+            <Button
                 onClick={startQuiz}
                 disabled={isInProgress || attempts === 0}
             >
                 Start Quiz
-            </button>
-            <button onClick={stopQuiz} disabled={!isInProgress}>
+            </Button>
+            <Button onClick={stopQuiz} disabled={!isInProgress}>
                 Stop Quiz
-            </button>
-            <button onClick={mulligan} disabled={isInProgress}>
+            </Button>
+            <Button onClick={mulligan} disabled={isInProgress}>
                 Mulligan
-            </button>
+            </Button>
             <p>Attempts left: {attempts}</p>
             <p>Quiz is {isInProgress ? "in progress" : "not in progress"}.</p>
         </div>
