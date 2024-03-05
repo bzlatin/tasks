@@ -11,20 +11,9 @@ export function d6(): number {
     return 1 + Math.floor(Math.random() * 6);
 }
 
-function rollTwoDifferentDice() {
-    const firstDie = d6();
-    let secondDie;
-    do {
-        secondDie = d6();
-    } while (firstDie === secondDie);
-    return [firstDie, secondDie];
-}
-
 export function TwoDice(): JSX.Element {
-    const [initialLeftDie, initialRightDie] = rollTwoDifferentDice();
-
-    const [leftDie, setLeftDie] = useState(initialLeftDie);
-    const [rightDie, setRightDie] = useState(initialRightDie);
+    const [leftDie, setLeftDie] = useState<number>(2);
+    const [rightDie, setRightDie] = useState<number>(3);
 
     const rollLeftDie = () => setLeftDie(d6());
     const rollRightDie = () => setRightDie(d6());
