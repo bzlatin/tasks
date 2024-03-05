@@ -53,8 +53,8 @@ FAIL src/nested.test.ts
 
 PASS src/functions.test.ts
 PASS src/components/StartAttempt.test.tsx
-PASS src/components/TwoDice.test.tsx
 PASS src/components/ChangeType.test.tsx
+PASS src/components/TwoDice.test.tsx
 PASS src/components/CycleHoliday.test.tsx
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
@@ -222,5 +222,5 @@ All files          |   99.44 |    98.57 |     100 |   99.39 |
 Test Suites: 2 failed, 9 passed, 11 total
 Tests:       2 failed, 91 passed, 93 total
 Snapshots:   0 total
-Time:        5.41 s
+Time:        5.35 s
 Ran all test suites.
